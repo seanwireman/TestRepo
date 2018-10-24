@@ -11,4 +11,4 @@
            Name: AnsibleLab
            Owner: Sean
       count: 2
-      # vpc_subnet_id: 
+      # vpc_subnet_id:
