@@ -25,3 +25,5 @@ var myVar = 7;
 console.log('Hello');
 
 ```
+
+That sums up the basic markup needed for a project with 5 overpaid numbskull devs.
