@@ -1,0 +1,14 @@
+--- # EC2 Module Basic Provision
+- hosts: localhost
+
+  tasks:
+  - name: Basic EC2 Provision
+    ec2:
+      region: us-east-1
+      instance_type: t2.micro
+      image: ami-0922553b7b0369273
+      instance_tags:
+           Name: AnsibleLab
+           Owner: Sean
+      count: 2
+      # vpc_subnet_id: 
