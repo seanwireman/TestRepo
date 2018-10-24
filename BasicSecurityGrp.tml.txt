@@ -1,0 +1,21 @@
+- hosts: localhost
+
+  tasks:
+
+    - name: Setting up Security/Firewall Group
+      ec2_group:
+         name: My_Security_Grp1
+         description: Rules Allowing Traffic on port 22 and 80
+         region: us-east-1
+         rules:
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cidr_ip: 0.0.0.0/0
+         rules_egress:
+          - proto: all
+            cidr_ip: 0.0.0.0/0
